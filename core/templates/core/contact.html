@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+{% block title %}Contact{% endblock %}
+ {% block content %}
+<div class="h-screen">
+{% if request.user.is_authenticated %}
+<p class="text-xl font-semibold text-center text-red-600">Mail the owner at <strong>{{ request.user.email }}</strong></p>
+{% else %}
+<p>Check the domain: <strong>shockstan.com</strong></p>
+{% endif %}
+</div>
+{% endblock %}
